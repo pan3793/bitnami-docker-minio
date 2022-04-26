@@ -1,3 +1,15 @@
+# Build
+
+```
+# one time
+docker run --privileged --rm tonistiigi/binfmt --install all
+docker buildx create --platform linux/amd64,linux/arm64 --use
+```
+
+```
+docker buildx build . -t pan3793/bitnami-minio:20220426 --platform=linux/amd64,linux/arm64 --push
+```
+
 # Bitnami Object Storage based on MinIO&reg;
 
 ## What is Bitnami Object Storage based on MinIO&reg;?
